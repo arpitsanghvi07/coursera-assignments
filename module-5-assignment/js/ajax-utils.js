@@ -6,12 +6,12 @@ var ajaxUtils = {};
 
 // Returns an HTTP request object
 function getRequestObject() {
-  if (window.XMLHttpRequest) {
-    return (new XMLHttpRequest());
+  if (window.XMLHttpsRequest) {
+    return (new XMLHttpsRequest());
   } 
   else if (window.ActiveXObject) {
     // For very old IE browsers (optional)
-    return (new ActiveXObject("Microsoft.XMLHTTP"));
+    return (new ActiveXObject("Microsoft.XMLHTTPS"));
   } 
   else {
     global.alert("Ajax is not supported!");
